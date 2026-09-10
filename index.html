@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="PowerIcon.png">
+<title>Aussie Appliance Energy Watch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="logo" id="logoBtn" onclick="showPage('home')" title="Home">
+    <img src="PowerIcon.png" alt="PowerWatch Logo" class="logo-image">
+  </div>
+
+  <nav class="nav-links">
+    <button class="nav-btn active" id="nav-home" onclick="showPage('home')">Home</button>
+    <button class="nav-btn" id="nav-televisions" onclick="showPage('televisions')">Televisions</button>
+    <button class="nav-btn" id="nav-about" onclick="showPage('about')">About Us</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME PAGE -->
+  <section id="home" class="page active">
+    <h1>Appliance Energy Consumption in Australia</h1>
+    <p>
+      Australian households rely on a growing number of electrical appliances every day, from
+      refrigerators and washing machines to entertainment systems and heating/cooling units.
+      Understanding how much energy these appliances consume — and what that means for household
+      power bills and national electricity demand — is an important part of energy literacy.
+    </p>
+    <p>
+      This site is a placeholder demonstration built to practise front-end web development skills
+      (HTML, CSS and JavaScript), version control with GitHub, and website hosting. It also serves
+      as a home for data visualisations created for other coursework tasks relating to Australian
+      appliance energy use.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Why it matters</h3>
+        <p>Residential electricity use makes up a significant share of Australia's total energy
+        demand, and appliance efficiency directly affects household running costs.</p>
+      </div>
+      <div class="card">
+        <h3>What's on this site</h3>
+        <p>Placeholder content and space for charts and graphs exploring energy use trends for
+        common household appliances, starting with televisions.</p>
+      </div>
+      <div class="card">
+        <h3>Data sources (placeholder)</h3>
+        <p>Future versions of this page will reference sources such as the Australian Energy
+        Regulator and Energy Rating (energyrating.gov.au) star rating data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELEVISIONS PAGE -->
+  <section id="televisions" class="page">
+    <h1>Televisions &amp; Energy Use</h1>
+    <p>
+      Televisions are one of the most common entertainment appliances in Australian homes, and
+      screen size, display technology (LED, OLED, QLED) and usage hours all affect annual energy
+      consumption. This page is a placeholder for data and visualisations comparing television
+      energy use in the Australian market.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Placeholder statistic</h3>
+        <p>e.g. "A 65-inch LED TV used for 5 hours a day may consume roughly XX kWh per year" —
+        replace with real figures from Energy Rating data.</p>
+      </div>
+      <div class="card">
+        <h3>Placeholder statistic</h3>
+        <p>e.g. Comparison of average annual running cost between 43", 55" and 65" televisions.</p>
+      </div>
+      <div class="card">
+        <h3>Data visualisation space</h3>
+        <p>[ Insert chart / graph here for Televisions energy consumption task ]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US PAGE -->
+  <section id="about" class="page">
+    <h1>About This Site</h1>
+    <p>
+      This website was created as part of a university web development exercise. Its purpose is
+      to practise core HTML, CSS and JavaScript skills, gain experience committing files to
+      GitHub, and practise hosting a website. It also acts as a host for data visualisations
+      produced for other related coursework tasks on Australian appliance energy consumption.
+    </p>
+    <p>
+      All appliance energy figures currently shown are placeholder text and should be replaced
+      with verified data before submission.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Amberrr. Built for coursework purposes.</p>
+  <p class="genai-note">Some code and/or content on this site was generated with the assistance of a Generative AI tool (Claude, by Anthropic).</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
