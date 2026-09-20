@@ -4,9 +4,10 @@
 // so this script knows which nav link to highlight as "active".
 
 var navHTML = `
-  <div class="logo" id="logoBtn" onclick="showPage('home')" title="Home">
-    <img src="PowerIcon.png" alt="PowerWatch Logo" class="logo-image">
-  </div>
+  <a class="logo" href="home.html" title="Home">
+    <img src="PowerIcon.png" alt="Power Icon" class="logo-image">
+    <span class="logo-text">Aus<span class="logo-accent">Power</span></span>
+  </a>
   <nav class="nav-links">
     <a class="nav-btn" href="home.html" data-page="home">Home</a>
     <a class="nav-btn" href="televisions.html" data-page="televisions">Televisions</a>
