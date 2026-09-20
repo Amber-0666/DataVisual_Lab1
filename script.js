@@ -1,38 +1,40 @@
-// Swaps between the three "pages" (sections) using JavaScript, no page reload.
-function showPage(pageId) {
-  // Hide all pages
-  document.querySelectorAll('.page').forEach(function (page) {
-    page.classList.remove('active');
-  });
+// Nav bar and footer are defined ONCE here and injected into every page.
+// Each HTML file only needs an empty <header id="site-nav"></header> and
+// <footer id="site-footer"></footer>, plus <body data-page="home|televisions|about">
+// so this script knows which nav link to highlight as "active".
 
-  // Show the requested page
-  var target = document.getElementById(pageId);
-  if (target) {
-    target.classList.add('active');
-  }
+var navHTML = `
+  <div class="logo" id="logoBtn" onclick="showPage('home')" title="Home">
+    <img src="PowerIcon.png" alt="PowerWatch Logo" class="logo-image">
+  </div>
+  <nav class="nav-links">
+    <a class="nav-btn" href="home.html" data-page="home">Home</a>
+    <a class="nav-btn" href="televisions.html" data-page="televisions">Televisions</a>
+    <a class="nav-btn" href="about.html" data-page="about">About Us</a>
+  </nav>
+`;
 
-  // Update nav button states so the user can see which page they're on
-  document.querySelectorAll('.nav-btn').forEach(function (btn) {
-    btn.classList.remove('active');
-  });
-  var navBtn = document.getElementById('nav-' + pageId);
-  if (navBtn) {
-    navBtn.classList.add('active');
-  }
+var footerHTML = `
+  <p>&copy; <span id="year"></span> Amberrr. Built for coursework purposes.</p>
+  <p class="genai-note">Some code and/or content on this site was generated with the assistance of a Generative AI tool (Claude, by Anthropic).</p>
+`;
 
-  // Keep the URL hash in sync so refresh/back-forward roughly works
-  window.location.hash = pageId;
-}
-
-// On load, check the URL hash to decide which page to show first
 document.addEventListener('DOMContentLoaded', function () {
-  var validPages = ['home', 'televisions', 'about'];
-  var startPage = window.location.hash.replace('#', '');
-  if (!validPages.includes(startPage)) {
-    startPage = 'home';
-  }
-  showPage(startPage);
+  // Inject the shared nav and footer markup
+  var navEl = document.getElementById('site-nav');
+  var footerEl = document.getElementById('site-footer');
+  if (navEl) navEl.innerHTML = navHTML;
+  if (footerEl) footerEl.innerHTML = footerHTML;
+
+  // Highlight whichever nav link matches this page's data-page attribute
+  var currentPage = document.body.getAttribute('data-page') || 'home';
+  var activeLink = document.querySelector('.nav-btn[data-page="' + currentPage + '"]');
+  if (activeLink) activeLink.classList.add('active');
+
+  // Always start at the top of the new page (fixes nav-bar-hidden-until-scroll issue)
+  window.scrollTo(0, 0);
 
   // Set footer year automatically
-  document.getElementById('year').textContent = new Date().getFullYear();
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
