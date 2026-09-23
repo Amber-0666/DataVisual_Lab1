@@ -21,6 +21,6 @@ Claude was used to assist with website development and coding tasks, including g
 
 GitHub repository: https://github.com/Amber-0666/DataVisual_Lab1.git
 
-Live Website: https://lab01datavisual.vercel.app/ 
+Live Website: https://lab01-datavisual.vercel.app/ 
 
 
