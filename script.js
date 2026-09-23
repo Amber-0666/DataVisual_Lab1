@@ -5,7 +5,7 @@
 
 var navHTML = `
   <a class="logo" href="home.html" title="Home">
-    <img src="PowerIcon.png" alt="Power Icon" class="logo-image">
+    <img src="images/PowerIcon.png" alt="Power Icon" class="logo-image">
     <span class="logo-text">Aus<span class="logo-accent">Power</span></span>
   </a>
   <nav class="nav-links">
