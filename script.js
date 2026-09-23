@@ -4,12 +4,12 @@
 // so this script knows which nav link to highlight as "active".
 
 var navHTML = `
-  <a class="logo" href="home.html" title="Home">
+  <a class="logo" href="index.html" title="Home">
     <img src="images/PowerIcon.png" alt="Power Icon" class="logo-image">
     <span class="logo-text">Aus<span class="logo-accent">Power</span></span>
   </a>
   <nav class="nav-links">
-    <a class="nav-btn" href="home.html" data-page="home">Home</a>
+    <a class="nav-btn" href="index.html" data-page="home">Home</a>
     <a class="nav-btn" href="televisions.html" data-page="televisions">Televisions</a>
     <a class="nav-btn" href="about.html" data-page="about">About Us</a>
   </nav>
